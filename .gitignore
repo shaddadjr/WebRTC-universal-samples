@@ -201,3 +201,4 @@ FakesAssemblies/
 # Custom ignores
 gallery.xml
 project.lock.json
+/Samples/PeerCC-Sample/ClientUnity/Unity/PeerCCUnity/Assets/HoloToolkit-Examples
