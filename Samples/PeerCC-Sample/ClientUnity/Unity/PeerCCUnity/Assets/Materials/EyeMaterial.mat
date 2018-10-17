@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: EyeMaterial
-  m_Shader: {fileID: 4800000, guid: c0d1ffde2e345054781fc32082017e6d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 122aa02bb9f5262418ab938a2bf29329, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0

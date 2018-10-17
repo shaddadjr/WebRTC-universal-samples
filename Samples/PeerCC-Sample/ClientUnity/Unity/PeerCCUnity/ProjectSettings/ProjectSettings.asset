@@ -572,9 +572,9 @@ PlayerSettings:
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: DefaultCompany
-  metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 800dfa209591d401
+  metroCertificateSubject: OpticalTone
+  metroCertificateIssuer: OpticalTone
+  metroCertificateNotAfter: 007baeb7ae7fd501
   metroApplicationDescription: PeerCCUnity
   wsaImages: {}
   metroTileShortName: UnityVideoSurface

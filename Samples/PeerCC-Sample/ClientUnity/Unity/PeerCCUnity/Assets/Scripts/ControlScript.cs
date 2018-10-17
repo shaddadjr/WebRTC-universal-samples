@@ -84,6 +84,7 @@ public class ControlScript : MonoBehaviour
         Conductor.Instance.EnableLogging(Conductor.LogLevel.Verbose);
 #endif
         ServerAddressInputField.text = "peercc-server.ortclib.org";
+        //ServerAddressInputField.text = "192.168.1.135";
     }
 
     private void OnEnable()
@@ -213,7 +214,7 @@ public class ControlScript : MonoBehaviour
                 if (command.type == CommandType.AddRemotePeer)
                 {
                     GameObject textItem = (GameObject)Instantiate(TextItemPreftab);
-                    textItem.transform.SetParent(PeerContent);
+                    textItem.transform.SetParent(PeerContent,false);
                     textItem.GetComponent<Text>().text = command.remotePeer.Name;
                     EventTrigger trigger = textItem.GetComponentInChildren<EventTrigger>();
                     EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -542,7 +543,15 @@ public class ControlScript : MonoBehaviour
 
         // Order the video codecs so that the stable VP8 is in front.
         var videoCodecList = Conductor.Instance.GetVideoCodecs();
-        Conductor.Instance.VideoCodec = videoCodecList.FirstOrDefault(c => c.Name == "H264");
+
+        foreach (Conductor.CodecInfo codec in videoCodecList)
+        {
+            System.Diagnostics.Debug.WriteLine("Codec Found: " + codec.Name);
+            print("Codec Found: " + codec.Name);
+        }
+        //SGH Changed to VP8 since Microsoft lists a known bug with H264 codec and skipping.
+        //Conductor.Instance.VideoCodec = videoCodecList.FirstOrDefault(c => c.Name == "H264"); 
+        Conductor.Instance.VideoCodec = videoCodecList.FirstOrDefault(c => c.Name == "VP8");
         System.Diagnostics.Debug.WriteLine("Selected video codec - " + Conductor.Instance.VideoCodec.Name);
 
         uint preferredWidth = 896;

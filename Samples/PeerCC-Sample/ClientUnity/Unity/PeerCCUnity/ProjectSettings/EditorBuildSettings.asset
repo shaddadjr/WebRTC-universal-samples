@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/PeerCCScene.unity
+    guid: c5cc64be432493348846cf79aad95ab3
   - enabled: 1
-    path: Assets/Scenes/VideoSurfaceScene.unity
-    guid: e1eda6aaf0ed45e469c248c14975f87a
+    path: Assets/Scenes/DIPeerCCScene.unity
+    guid: 6d1b464925848054a8d7dbc6944c0a9e
